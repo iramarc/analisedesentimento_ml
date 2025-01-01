@@ -1,0 +1,6 @@
+Flask
+flask-cors
+transformers
+scikit-learn
+requests
+imbalanced-learn

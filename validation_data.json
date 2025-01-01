@@ -1,0 +1,7 @@
+[
+    {"text": "I love this!", "expected": "POSITIVE"},
+    {"text": "This is terrible.", "expected": "NEGATIVE"},
+    {"text": "Not bad, but could be better.", "expected": "POSITIVE"},
+    {"text": "Absolutely awful experience.", "expected": "NEGATIVE"},
+    {"text": "It's okay, nothing special.", "expected": "POSITIVE"}
+]
