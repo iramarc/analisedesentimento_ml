@@ -27,6 +27,7 @@ jobs:
           pip install -r requirements.txt
           pip install torch  # Instala PyTorch
           pip install pytest  # Instala pytest
+          pip install pytest-benchmark  # Instala pytest-benchmark
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -52,3 +53,9 @@ jobs:
         run: |
           export PYTHONPATH=$PYTHONPATH:$(pwd)
           pytest tests  # Especifica o diretório de testes
+
+      - name: Run benchmark tests
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          pytest tests/benchmark.py  # Executa o benchmark.py
+          pytest tests/benchmark_quality.py  # Executa o benchmark_quality.py
