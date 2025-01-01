@@ -3,6 +3,9 @@ from transformers import pipeline
 from flask_cors import CORS
 import re  # Import para regex
 
+# Inicialize o pipeline aqui, fora das rotas
+model = pipeline('sentiment-analysis', model='nlptown/bert-base-multilingual-uncased-sentiment')
+
 # Função para mapear estrelas para rótulos
 def map_sentiment(label):
     if label in ['1 star', '2 stars']:
@@ -49,8 +52,6 @@ def predict():
         return jsonify({"error": f"Ocorreu um erro: {str(e)}"}), 500
 
 if __name__ == '__main__':
-    # Inicialize o pipeline aqui, fora das rotas
-    model = pipeline('sentiment-analysis', model='nlptown/bert-base-multilingual-uncased-sentiment')
     # Rodando o servidor Flask na porta 5000
     app.run(debug=True, host='0.0.0.0', port=5000)
 
