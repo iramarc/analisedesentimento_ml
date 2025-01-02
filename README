@@ -5,213 +5,99 @@ Este projeto utiliza um modelo de análise de sentimentos para classificar texto
 Pré-requisitos
 Certifique-se de ter os seguintes softwares instalados:
 
-Visual Studio Code
-
+Visual Studio Code (IDE)
 Node.js(versão patch)
-
 Python (versão patch)
-
-Anaconda3
-
-Cypress (instalado via PowerShell)
-
-Microsoft Visual Studio Installer
-
-Rust
-
-Instalação
-Siga os passos abaixo para configurar o ambiente:
-
-Instale o Visual Studio Code, Node.js, Python e Anaconda3.
-
-Instale o Cypress via PowerShell e libere a utilização de scripts:
-
-sh
-Get-ExecutionPolicy
-Set-ExecutionPolicy RemoteSigned
-Instale as ferramentas de build do Visual Studio para desenvolvimento em C++.
-
-Instale o Rust:
-
-sh
-rustup-init.exe
-Execute o Visual Studio Code e instale as extensões do Python e Live Server.
+Anaconda3 (Isso elimina potenciais problemas com a instalação de pacotes com dependências difíceis exemplo :PyTorch)
+Cypress 
+rustup-init.exe (O ecossistema Rust inclui bibliotecas robustas para várias finalidades, como web, cryptografia, inteligência artificial, entre outros.)
 
 Instale as dependências do projeto:
-
-sh
-npm install cypress
-python -m ensurepip --upgrade
-pip install --upgrade setuptools
-pip install -r requirements.txt
-pip install torch
-Uso
-Para executar a aplicação, siga os passos abaixo:
-
-Inicie o servidor Flask:
-
-sh
-python app.py
-A aplicação estará disponível em http://0.0.0.0:5000.
-
-Envie uma requisição POST para o endpoint /predict com um JSON contendo o texto a ser analisado:
-
-json
-{
-    "text": "Seu texto aqui"
-}
-Arquivos Principais
-app.py: Contém a lógica principal da aplicação Flask.
-
-benchmark_quality.py: Similar ao app.py, utilizado para benchmarks de qualidade.
-
-benchmark.py: Script para medir o tempo de resposta da API e verificar se está dentro do limite aceitável.
-
-cypress.config.js: Configuração do Cypress para testes end-to-end.
-
-index.html: Interface web para enviar textos e visualizar os resultados da análise de sentimentos.
-
-package.json: Arquivo de configuração do Node.jscom as dependências de desenvolvimento.
-
-requirements.txt: Lista de dependências Python necessárias para o projeto.
-
-validation_data.json: Dados de validação para testar a precisão do modelo de análise de sentimentos.
-
-sentiment_analysis.cy.js: Testes end-to-end para verificar a funcionalidade e desempenho da API de análise de sentimentos.
-
-CI/CD com GitHub Actions
-Este projeto utiliza GitHub Actions para automação de CI/CD. O pipeline é configurado para executar testes automatizados e deploy contínuo.
-
-Configuração do Pipeline
-Crie um arquivo .github/workflows/ci.yml no repositório.
-
-Adicione a configuração do pipeline:
-
-yaml
-name: CI/CD Pipeline
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      # Passo 1: Faz o checkout do código
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Passo 2: Configura o Python
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-
-      # Passo 3: Instala as dependências do Python
-      - name: Install dependencies
-        run: |
+          npm install cypress
+          npm npm install
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install torch  # Instala PyTorch
           pip install pytest  # Instala pytest
 
-      # Passo 4: Configura o Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+Uso:
+Para executar a aplicação, siga os passos abaixo:
 
-      # Passo 5: Instala as dependências do Node.js
-      - name: Install Node.js dependencies
-        run: npm install
+Inicie o servidor Flask: python app.py
 
-      # Passo 6: Inicia o servidor Flask em segundo plano
-      - name: Start Flask server
-        run: |
-          nohup python app.py &  # Inicia o servidor Flask em segundo plano
-        env:
-          FLASK_ENV: development
+A aplicação estará disponível em http://0.0.0.0:5000.
 
-      # Passo 7: Aguarda o Flask ficar pronto
-      - name: Wait for Flask server to be ready
-        run: sleep 20  # Aumenta o tempo de espera para garantir que o servidor Flask esteja pronto
+Arquivos Principais:
 
-      # Passo 8: Executa os testes do Cypress
-      - name: Run Cypress tests
-        run: npx cypress run
+app.py: Contém a lógica principal da aplicação Flask.
+benchmark_quality.py: Similar ao app.py, utilizado para benchmarks de qualidade.
+benchmark.py: Script para medir o tempo de resposta da API e verificar se está dentro do limite aceitável.
+cypress.config.js: Configuração do Cypress para testes end-to-end.
+index.html: Interface web para enviar textos e visualizar os resultados da análise de sentimentos.
+package.json: Arquivo de configuração do Node.jscom as dependências de desenvolvimento.
+requirements.txt: Lista de dependências Python necessárias para o projeto.
+validation_data.json: Dados de validação para testar a precisão do modelo de análise de sentimentos.
+sentiment_analysis.cy.js: Testes end-to-end para verificar a funcionalidade e desempenho da API de análise de sentimentos.
 
-      # Passo 9: Executa os testes do Python (com `pytest`)
-      - name: Run Python tests
-        run: |
-          export PYTHONPATH=$PYTHONPATH:$(pwd)  # Define a variável de ambiente PYTHONPATH
-          pytest tests/test_benchmark.py  # Executa o teste benchmark
-          pytest tests/test_benchmark_quality.py  # Executa o teste benchmark_quality
+CI/CD com GitHub Actions
+Este projeto utiliza GitHub Actions para automação de CI/CD. O pipeline é configurado para executar testes automatizados e deploy contínuo.
+
 Resultados de Benchmarking
 Os testes de benchmarking foram realizados para medir o desempenho da API e a qualidade das inferências.
 
-Métricas de Desempenho
-Tempo de resposta médio: 150ms
+Métricas de Desempenho: Enviar um texto válido para a API, medir o tempo de resposta e verificar se está dentro do limite aceitável (200ms). Motivo: Garantir que a API responde rapidamente a requisições válidas, proporcionando uma boa experiência ao usuário.
 
+Tempo de resposta médio: 150ms
 Taxa de sucesso: 98%
 
-Avaliações de Qualidade de Inferência
-Precisão: 88.57%
+Avaliações de Qualidade de Inferência: Explicação do Código 
 
-Recall (Positivo): 95.00%
+Geração de Dados Sintéticos:
+A função generate_synthetic_data cria textos sintéticos com sentimentos positivos e negativos, tanto em inglês quanto em português. Isso ajuda a aumentar o conjunto de dados de validação.
+Teste de Benchmark de Qualidade:
+A função test_benchmark_quality combina os dados sintéticos com os dados de validação existentes e faz previsões usando a API.
+As métricas de desempenho, como precisão, recall e F1 score, são calculadas usando a biblioteca classification_report do sklearn.
+Critérios de Aceitação:
+O código verifica se a precisão do modelo está acima de um limite mínimo aceitável (80%)
 
-F1 Score (Positivo): 97.44%
+Precisão: 85.71%
 
-Recall (Negativo): 84.62%
+Recall (Positivo): 93.33%
+F1 Score (Positivo): 88.89%
+Recall (Negativo): 83.12%
+F1 Score (Negativo): 85.91%
+Recall (Neutro): 70.59%
+F1 Score (Neutro): 72.73%
 
-F1 Score (Negativo): 91.67%
+Testes de Análise de Sentimentos Cypress: (sentiment_analysis.cy.js)
 
-Garantia de Qualidade das Inferências
-Para garantir que as inferências do modelo sejam precisas, implementamos as seguintes estratégias:
+Teste 1: Verifica predição para texto válido em inglês
+Ideia: Enviar um texto válido em inglês para a API e verificar se a predição está dentro dos valores esperados (POSITIVO, NEGATIVO, NEUTRAL) e se a confiança é um número maior que 0. Motivo: Garantir que a API está funcionando corretamente para textos em inglês e que a predição e a confiança retornadas são válidas.
 
-Validação cruzada: Utilizamos validação cruzada para avaliar a performance do modelo.
+Teste 2: Verifica predição para texto válido em português
+Ideia: Enviar um texto válido em português para a API e verificar se a predição está dentro dos valores esperados (POSITIVO, NEGATIVO, NEUTRAL) e se a confiança é um número maior que 0. Motivo: Garantir que a API está funcionando corretamente para textos em português e que a predição e a confiança retornadas são válidas.
 
-Ajuste de hiperparâmetros: Realizamos ajustes nos hiperparâmetros para otimizar o desempenho.
+Teste 3: Valida comportamento para texto vazio
+Ideia: Enviar um texto vazio para a API e verificar se a mensagem de erro retornada está correta. Motivo: Garantir que a API lida corretamente com entradas inválidas, como textos vazios, e retorna mensagens de erro apropriadas.
 
-Testes de validação: Utilizamos um conjunto de dados de validação para testar a precisão do modelo.
+Teste 4: Valida comportamento para entrada numérica
+Ideia: Enviar um texto contendo apenas números para a API e verificar se a mensagem de erro retornada está correta. Motivo: Garantir que a API lida corretamente com entradas inválidas, como textos contendo apenas números, e retorna mensagens de erro apropriadas.
 
-Desafios Enfrentados
-Tempo de inferência: Otimizamos o código para reduzir o tempo de inferência sem comprometer a precisão.
+Teste 5: Verifica processamento de texto com caracteres especiais
+Ideia: Enviar um texto contendo caracteres especiais para a API e verificar se a predição está dentro dos valores esperados (POSITIVO, NEGATIVO, NEUTRAL) e se a confiança é um número maior que 0. Motivo: Garantir que a API pode processar textos contendo caracteres especiais e retornar predições válidas.
 
-Possíveis Aplicações do Projeto
-Monitoramento de Redes Sociais: Analisar sentimentos em postagens e comentários para entender a percepção do público sobre uma marca ou produto.
+Teste 6: Valida funcionalidade de limpeza de campos na interface
+Ideia: Inserir um texto no campo de entrada da interface web, clicar no botão "Limpar" e verificar se os campos de entrada e resultado foram limpos corretamente. Motivo: Garantir que a funcionalidade de limpeza de campos na interface web está funcionando corretamente.
 
-Atendimento ao Cliente: Avaliar o sentimento em interações de atendimento ao cliente para identificar problemas e melhorar a satisfação do cliente.
+Teste 7: Valida comportamento para texto contendo apenas caracteres especiais
+Ideia: Enviar um texto contendo apenas caracteres especiais para a API e verificar se a mensagem de erro retornada está correta. Motivo: Garantir que a API lida corretamente com entradas inválidas, como textos contendo apenas caracteres especiais, e retorna mensagens de erro apropriadas.
 
-Análise de Feedback: Processar feedback de clientes e funcionários para identificar áreas de melhoria e tomar decisões informadas.
+Possíveis Aplicações do Projeto:
 
-Pesquisa de Mercado: Analisar opiniões e sentimentos em pesquisas de mercado para entender as preferências e necessidades dos consumidores.
+Monitoramento de Redes Sociais - Analisar sentimentos em postagens e comentários para entender a percepção do público sobre uma marca ou produto.
 
-Futura Atualização: Criação de um Banco de Dados Personalizado
-Descrição
-Criar um banco de dados personalizado para melhorar a precisão do modelo, especialmente para a categoria neutra.
+Atendimento ao Cliente - Avaliar o sentimento em interações de atendimento ao cliente para identificar problemas e melhorar a satisfação do cliente.
 
-Passos
-Coleta de Dados: Coletar um conjunto de dados diversificado contendo textos classificados como positivos, negativos e neutros.
+Análise de Feedback - Processar feedback de clientes e funcionários para identificar áreas de melhoria e tomar decisões informadas.
 
-Criação do Banco de Dados: Armazenar os dados coletados em um banco de dados estruturado.
-
-Treinamento do Modelo: Treinar o modelo de machine learning utilizando o banco de dados personalizado.
-
-Integração com a API: Integrar o modelo treinado com a API de análise de sentimentos.
-
-Monitoramento e Avaliação: Monitorar a performance do modelo em produção e avaliar continuamente sua precisão.
-
-Tecnologias Utilizadas
-MySQL, PostgreSQL, MongoDB
-
-scikit-learn, TensorFlow, PyTorch
-
-Flask, FastAPI
-
-Prometheus, Grafana, ELK Stack
+Pesquisa de Mercado - Analisar opiniões e sentimentos em pesquisas de mercado para entender as preferências e necessidades dos consumidores.
