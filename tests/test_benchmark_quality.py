@@ -5,23 +5,45 @@ import requests
 
 # Função para gerar dados sintéticos
 def generate_synthetic_data(num_samples):
-    positive_words = ["happy", "great", "amazing", "fantastic", "love"]
-    negative_words = ["sad", "terrible", "awful", "hate", "bad"]
+    # Lista expandida de palavras positivas e negativas
+    positive_words_en = ["happy", "great", "amazing", "fantastic", "love", "joyful", "excited", "delighted", "thrilled", "awesome"]
+    negative_words_en = ["sad", "terrible", "awful", "hate", "bad", "disappointed", "frustrated", "horrible", "miserable", "angry"]
+    positive_words_pt = ["feliz", "ótimo", "incrível", "fantástico", "amor", "alegre", "empolgado", "encantado", "radiante", "maravilhoso"]
+    negative_words_pt = ["triste", "terrível", "horrível", "ódio", "ruim", "decepcionado", "frustrado", "pavoroso", "miserável", "irritado", "desastroso", "atroz", "decepcionante", "insuportável"]
+    
+    # Palavras para adicionar intensidade
+    intensity_words_en = ["really", "so", "extremely", "super", "incredibly", "absolutely", "totally"]
+    intensity_words_pt = ["realmente", "muito", "extremamente", "super", "incrivelmente", "absolutamente", "totalmente"]
+
     synthetic_data = []
     
     for _ in range(num_samples):
         sentiment = random.choice(["POSITIVE", "NEGATIVE"])
+        language = random.choice(["EN", "PT"])
+        
+        # Adicionar palavras de intensidade nas frases
         if sentiment == "POSITIVE":
-            text = f"I am feeling {random.choice(positive_words)} today."
+            if language == "EN":
+                intensity = random.choice(intensity_words_en)
+                text = f"I am {intensity} feeling {random.choice(positive_words_en)} today."
+            else:
+                intensity = random.choice(intensity_words_pt)
+                text = f"Estou {intensity} me sentindo {random.choice(positive_words_pt)} hoje."
         else:
-            text = f"I am feeling {random.choice(negative_words)} today."
+            if language == "EN":
+                intensity = random.choice(intensity_words_en)
+                text = f"I am {intensity} feeling {random.choice(negative_words_en)} today."
+            else:
+                intensity = random.choice(intensity_words_pt)
+                text = f"Estou {intensity} me sentindo {random.choice(negative_words_pt)} hoje."
+        
         synthetic_data.append({"text": text, "expected": sentiment})
     
     return synthetic_data
 
 def test_benchmark_quality():
     # Gerar dados sintéticos
-    synthetic_data = generate_synthetic_data(100)  # Gerar 100 amostras sintéticas
+    synthetic_data = generate_synthetic_data(100)  # Gerar 45 amostras sintéticas
     with open("synthetic_data.json", "w") as f:
         json.dump(synthetic_data, f, indent=4)
     print("Dados sintéticos gerados e salvos em synthetic_data.json")
@@ -32,7 +54,7 @@ def test_benchmark_quality():
 
     combined_data = existing_data + synthetic_data
 
-    # Preparar dados para avaliação
+   # Preparar dados para avaliação
     true_labels = []
     predicted_labels = []
 
@@ -49,15 +71,16 @@ def test_benchmark_quality():
         predicted_labels.append(predicted_label)
 
     # Calcular métricas
-    report = classification_report(true_labels, predicted_labels, output_dict=True)
+    report = classification_report(
+        true_labels, predicted_labels, output_dict=True, zero_division=1, labels=["POSITIVE", "NEGATIVE", "NEUTRAL"]
+    )
 
     # Exibir resultados
-    print("Benchmarking de Qualidade de Inferência:")
+    print("\nBenchmarking de Qualidade de Inferência:")
     print(f"Precisão: {report['accuracy'] * 100:.2f}%")
-    print(f"Recall (Positivo): {report['POSITIVE']['recall'] * 100:.2f}%")
-    print(f"F1 Score (Positivo): {report['POSITIVE']['f1-score'] * 100:.2f}%")
-    print(f"Recall (Negativo): {report['NEGATIVE']['recall'] * 100:.2f}%")
-    print(f"F1 Score (Negativo): {report['NEGATIVE']['f1-score'] * 100:.2f}%")
+    for label in ["POSITIVE", "NEGATIVE", "NEUTRAL"]:
+        print(f"Recall ({label}): {report[label]['recall'] * 100:.2f}%")
+        print(f"F1 Score ({label}): {report[label]['f1-score'] * 100:.2f}%")
 
     # Critérios de aceitação
     MIN_ACCURACY = 0.8
@@ -65,3 +88,4 @@ def test_benchmark_quality():
 
 if __name__ == "__main__":
     test_benchmark_quality()
+

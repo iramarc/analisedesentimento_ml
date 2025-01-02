@@ -3,7 +3,6 @@ from transformers import pipeline
 from flask_cors import CORS
 import re  # Import para regex
 
-# Inicialize o pipeline aqui, fora das rotas
 model = pipeline('sentiment-analysis', model='nlptown/bert-base-multilingual-uncased-sentiment')
 
 # Função para mapear estrelas para rótulos

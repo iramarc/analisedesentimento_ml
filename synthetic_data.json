@@ -1,402 +1,402 @@
 [
     {
-        "text": "I am feeling awful today.",
+        "text": "I am totally feeling hate today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling love today.",
+        "text": "Estou totalmente me sentindo radiante hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling bad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling amazing today.",
+        "text": "I am super feeling delighted today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling amazing today.",
+        "text": "Estou extremamente me sentindo decepcionado hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou absolutamente me sentindo atroz hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am totally feeling love today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling happy today.",
+        "text": "Estou muito me sentindo \u00f3timo hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling happy today.",
+        "text": "I am totally feeling amazing today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling love today.",
+        "text": "I am super feeling horrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am extremely feeling happy today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling bad today.",
+        "text": "I am absolutely feeling bad today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling sad today.",
+        "text": "I am so feeling hate today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling fantastic today.",
+        "text": "I am really feeling awesome today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling happy today.",
+        "text": "Estou incrivelmente me sentindo atroz hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou realmente me sentindo atroz hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou super me sentindo fant\u00e1stico hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling love today.",
+        "text": "I am absolutely feeling excited today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling fantastic today.",
+        "text": "Estou super me sentindo fant\u00e1stico hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling love today.",
+        "text": "Estou realmente me sentindo decepcionado hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou incrivelmente me sentindo horr\u00edvel hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou absolutamente me sentindo desastroso hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou incrivelmente me sentindo radiante hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling hate today.",
+        "text": "I am totally feeling angry today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling hate today.",
+        "text": "Estou absolutamente me sentindo ruim hoje.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling terrible today.",
+        "text": "I am extremely feeling hate today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling bad today.",
+        "text": "I am totally feeling hate today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling happy today.",
+        "text": "Estou incrivelmente me sentindo maravilhoso hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling terrible today.",
+        "text": "Estou extremamente me sentindo terr\u00edvel hoje.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling happy today.",
+        "text": "Estou incrivelmente me sentindo miser\u00e1vel hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou realmente me sentindo amor hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling great today.",
+        "text": "Estou realmente me sentindo fant\u00e1stico hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling great today.",
+        "text": "I am extremely feeling delighted today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling awful today.",
+        "text": "I am absolutely feeling horrible today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling awful today.",
+        "text": "Estou absolutamente me sentindo decepcionante hoje.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling bad today.",
+        "text": "Estou incrivelmente me sentindo triste hoje.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling bad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling great today.",
+        "text": "Estou extremamente me sentindo maravilhoso hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling amazing today.",
+        "text": "Estou realmente me sentindo fant\u00e1stico hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling great today.",
+        "text": "I am absolutely feeling excited today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling bad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling bad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling sad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling amazing today.",
+        "text": "Estou incrivelmente me sentindo feliz hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling sad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling amazing today.",
+        "text": "I am really feeling joyful today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling love today.",
+        "text": "Estou muito me sentindo maravilhoso hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling awful today.",
+        "text": "I am absolutely feeling disappointed today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling love today.",
+        "text": "I am totally feeling miserable today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou absolutamente me sentindo decepcionante hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am incredibly feeling thrilled today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling sad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling fantastic today.",
+        "text": "I am so feeling awesome today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling bad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling great today.",
+        "text": "I am totally feeling fantastic today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling amazing today.",
+        "text": "I am really feeling angry today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou realmente me sentindo empolgado hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling fantastic today.",
+        "text": "Estou absolutamente me sentindo miser\u00e1vel hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am totally feeling awesome today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling hate today.",
+        "text": "Estou super me sentindo irritado hoje.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling great today.",
+        "text": "I am super feeling excited today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling fantastic today.",
+        "text": "I am absolutely feeling excited today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling bad today.",
+        "text": "I am so feeling miserable today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling hate today.",
+        "text": "Estou super me sentindo ruim hoje.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling sad today.",
+        "text": "I am super feeling bad today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling love today.",
+        "text": "I am really feeling love today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling hate today.",
+        "text": "I am so feeling terrible today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling sad today.",
+        "text": "I am absolutely feeling miserable today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling terrible today.",
+        "text": "Estou extremamente me sentindo pavoroso hoje.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling amazing today.",
+        "text": "I am totally feeling frustrated today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am totally feeling delighted today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling sad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling bad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling great today.",
+        "text": "I am super feeling awesome today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling fantastic today.",
+        "text": "I am so feeling excited today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling sad today.",
+        "text": "Estou totalmente me sentindo decepcionante hoje.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling love today.",
+        "text": "I am totally feeling awful today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou absolutamente me sentindo radiante hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling bad today.",
+        "text": "Estou absolutamente me sentindo irritado hoje.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling amazing today.",
+        "text": "Estou muito me sentindo terr\u00edvel hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou super me sentindo horr\u00edvel hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou absolutamente me sentindo decepcionante hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am totally feeling frustrated today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou super me sentindo fant\u00e1stico hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling great today.",
+        "text": "I am absolutely feeling awesome today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling bad today.",
+        "text": "Estou incrivelmente me sentindo triste hoje.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling sad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling fantastic today.",
+        "text": "Estou muito me sentindo \u00f3timo hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling amazing today.",
+        "text": "Estou muito me sentindo frustrado hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou muito me sentindo insuport\u00e1vel hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou super me sentindo maravilhoso hoje.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling terrible today.",
+        "text": "Estou incrivelmente me sentindo amor hoje.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am so feeling delighted today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "Estou muito me sentindo \u00f3dio hoje.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling terrible today.",
+        "text": "I am absolutely feeling horrible today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling sad today.",
+        "text": "I am super feeling joyful today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am extremely feeling horrible today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling terrible today.",
+        "text": "I am extremely feeling happy today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am absolutely feeling excited today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am extremely feeling sad today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling awful today.",
+        "text": "Estou incrivelmente me sentindo ruim hoje.",
         "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am totally feeling frustrated today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou totalmente me sentindo \u00f3timo hoje.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am super feeling frustrated today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am so feeling excited today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "Estou muito me sentindo frustrado hoje.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "Estou realmente me sentindo amor hoje.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am so feeling happy today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "Estou super me sentindo amor hoje.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am extremely feeling delighted today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am extremely feeling fantastic today.",
+        "expected": "POSITIVE"
     }
 ]
