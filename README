@@ -7,7 +7,7 @@ Certifique-se de ter os seguintes softwares instalados:
 
 Visual Studio Code
 
-Node.js (versão patch)
+Node.js(versão patch)
 
 Python (versão patch)
 
@@ -103,33 +103,55 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      # Passo 1: Faz o checkout do código
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
+      # Passo 2: Configura o Python
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      # Passo 3: Instala as dependências do Python
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install torch  # Instala PyTorch
+          pip install pytest  # Instala pytest
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
+      # Passo 4: Configura o Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
-    - name: Install Node.js dependencies
-      run: npm install
+      # Passo 5: Instala as dependências do Node.js
+      - name: Install Node.js dependencies
+        run: npm install
 
-    - name: Run Cypress tests
-      run: npx cypress run
+      # Passo 6: Inicia o servidor Flask em segundo plano
+      - name: Start Flask server
+        run: |
+          nohup python app.py &  # Inicia o servidor Flask em segundo plano
+        env:
+          FLASK_ENV: development
 
-    - name: Run Python tests
-      run: |
-        pytest
+      # Passo 7: Aguarda o Flask ficar pronto
+      - name: Wait for Flask server to be ready
+        run: sleep 20  # Aumenta o tempo de espera para garantir que o servidor Flask esteja pronto
+
+      # Passo 8: Executa os testes do Cypress
+      - name: Run Cypress tests
+        run: npx cypress run
+
+      # Passo 9: Executa os testes do Python (com `pytest`)
+      - name: Run Python tests
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)  # Define a variável de ambiente PYTHONPATH
+          pytest tests/test_benchmark.py  # Executa o teste benchmark
+          pytest tests/test_benchmark_quality.py  # Executa o teste benchmark_quality
 Resultados de Benchmarking
 Os testes de benchmarking foram realizados para medir o desempenho da API e a qualidade das inferências.
 
@@ -139,9 +161,15 @@ Tempo de resposta médio: 150ms
 Taxa de sucesso: 98%
 
 Avaliações de Qualidade de Inferência
-Precisão: 95%
+Precisão: 88.57%
 
-Recall: 92%
+Recall (Positivo): 95.00%
+
+F1 Score (Positivo): 97.44%
+
+Recall (Negativo): 84.62%
+
+F1 Score (Negativo): 91.67%
 
 Garantia de Qualidade das Inferências
 Para garantir que as inferências do modelo sejam precisas, implementamos as seguintes estratégias:
@@ -153,8 +181,6 @@ Ajuste de hiperparâmetros: Realizamos ajustes nos hiperparâmetros para otimiza
 Testes de validação: Utilizamos um conjunto de dados de validação para testar a precisão do modelo.
 
 Desafios Enfrentados
-Desbalanceamento de dados: O conjunto de dados inicial era desbalanceado, o que afetou a precisão do modelo. Resolvemos isso utilizando técnicas de oversampling (SMOTE) e undersampling (Tomek Links).
-
 Tempo de inferência: Otimizamos o código para reduzir o tempo de inferência sem comprometer a precisão.
 
 Possíveis Aplicações do Projeto
@@ -167,10 +193,10 @@ Análise de Feedback: Processar feedback de clientes e funcionários para identi
 Pesquisa de Mercado: Analisar opiniões e sentimentos em pesquisas de mercado para entender as preferências e necessidades dos consumidores.
 
 Futura Atualização: Criação de um Banco de Dados Personalizado
-Descrição: Criar um banco de dados personalizado para melhorar a precisão do modelo, especialmente para a categoria neutra.
+Descrição
+Criar um banco de dados personalizado para melhorar a precisão do modelo, especialmente para a categoria neutra.
 
-Passos:
-
+Passos
 Coleta de Dados: Coletar um conjunto de dados diversificado contendo textos classificados como positivos, negativos e neutros.
 
 Criação do Banco de Dados: Armazenar os dados coletados em um banco de dados estruturado.
@@ -181,4 +207,11 @@ Integração com a API: Integrar o modelo treinado com a API de análise de sent
 
 Monitoramento e Avaliação: Monitorar a performance do modelo em produção e avaliar continuamente sua precisão.
 
-Tecnologias Utilizadas: MySQL, PostgreSQL, MongoDB, scikit-learn, TensorFlow, PyTorch, Flask, FastAPI, Prometheus, Grafana, ELK Stack.
+Tecnologias Utilizadas
+MySQL, PostgreSQL, MongoDB
+
+scikit-learn, TensorFlow, PyTorch
+
+Flask, FastAPI
+
+Prometheus, Grafana, ELK Stack

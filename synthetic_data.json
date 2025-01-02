@@ -1,6 +1,6 @@
 [
     {
-        "text": "I am feeling bad today.",
+        "text": "I am feeling awful today.",
         "expected": "NEGATIVE"
     },
     {
@@ -16,163 +16,7 @@
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling love today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling bad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling fantastic today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling bad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling fantastic today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling great today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling love today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling happy today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling sad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling great today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling sad today.",
-        "expected": "NEGATIVE"
-    },
-    {
         "text": "I am feeling amazing today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling amazing today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling love today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling love today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling great today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling amazing today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling love today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling love today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling fantastic today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling bad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling love today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling bad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling love today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling great today.",
         "expected": "POSITIVE"
     },
     {
@@ -184,8 +28,16 @@
         "expected": "POSITIVE"
     },
     {
+        "text": "I am feeling happy today.",
+        "expected": "POSITIVE"
+    },
+    {
         "text": "I am feeling love today.",
         "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling bad today.",
+        "expected": "NEGATIVE"
     },
     {
         "text": "I am feeling sad today.",
@@ -196,15 +48,15 @@
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling sad today.",
-        "expected": "NEGATIVE"
+        "text": "I am feeling happy today.",
+        "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
+        "text": "I am feeling love today.",
+        "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling terrible today.",
+        "text": "I am feeling hate today.",
         "expected": "NEGATIVE"
     },
     {
@@ -212,152 +64,52 @@
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling love today.",
-        "expected": "POSITIVE"
-    },
-    {
         "text": "I am feeling fantastic today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling happy today.",
+        "text": "I am feeling love today.",
         "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling hate today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling hate today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
     },
     {
         "text": "I am feeling bad today.",
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
+        "text": "I am feeling happy today.",
+        "expected": "POSITIVE"
     },
     {
         "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling sad today.",
         "expected": "NEGATIVE"
     },
     {
         "text": "I am feeling happy today.",
         "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling amazing today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling love today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
     },
     {
         "text": "I am feeling great today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling happy today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling amazing today.",
+        "text": "I am feeling great today.",
         "expected": "POSITIVE"
     },
     {
         "text": "I am feeling awful today.",
         "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling happy today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling sad today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling love today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling fantastic today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling hate today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling fantastic today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling amazing today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling awful today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling amazing today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling fantastic today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling happy today.",
-        "expected": "POSITIVE"
-    },
-    {
-        "text": "I am feeling terrible today.",
-        "expected": "NEGATIVE"
-    },
-    {
-        "text": "I am feeling happy today.",
-        "expected": "POSITIVE"
     },
     {
         "text": "I am feeling awful today.",
@@ -368,12 +120,96 @@
         "expected": "NEGATIVE"
     },
     {
-        "text": "I am feeling fantastic today.",
+        "text": "I am feeling bad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling great today.",
         "expected": "POSITIVE"
     },
     {
-        "text": "I am feeling fantastic today.",
+        "text": "I am feeling amazing today.",
         "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling hate today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling great today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling bad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling bad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling sad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling amazing today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling hate today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling awful today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling sad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling awful today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling amazing today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling love today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling awful today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling love today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling sad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling hate today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling awful today.",
+        "expected": "NEGATIVE"
     },
     {
         "text": "I am feeling fantastic today.",
@@ -384,19 +220,183 @@
         "expected": "NEGATIVE"
     },
     {
+        "text": "I am feeling hate today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling bad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
         "text": "I am feeling great today.",
         "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling amazing today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling fantastic today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling hate today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling great today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling awful today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling fantastic today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling bad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling hate today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling sad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling awful today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling awful today.",
+        "expected": "NEGATIVE"
     },
     {
         "text": "I am feeling love today.",
         "expected": "POSITIVE"
     },
     {
+        "text": "I am feeling hate today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling sad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling amazing today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling sad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling bad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
         "text": "I am feeling great today.",
         "expected": "POSITIVE"
     },
     {
+        "text": "I am feeling fantastic today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling sad today.",
+        "expected": "NEGATIVE"
+    },
+    {
         "text": "I am feeling love today.",
         "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling bad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling amazing today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling great today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling bad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling sad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling awful today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling awful today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling fantastic today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling amazing today.",
+        "expected": "POSITIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling sad today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling terrible today.",
+        "expected": "NEGATIVE"
+    },
+    {
+        "text": "I am feeling awful today.",
+        "expected": "NEGATIVE"
     }
 ]
