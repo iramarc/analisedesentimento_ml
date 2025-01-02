@@ -60,9 +60,8 @@ def test_benchmark_quality():
     print(f"F1 Score (Negativo): {report['NEGATIVE']['f1-score'] * 100:.2f}%")
 
     # Critérios de aceitação
-    MIN_ACCURACY = 0.8
-    if report["accuracy"] < MIN_ACCURACY:
-        raise ValueError(f"A precisão do modelo está abaixo do limite aceitável de {MIN_ACCURACY * 100:.2f}%!")
+    MIN_ACCURACY = 0.9
+    assert report["accuracy"] >= MIN_ACCURACY, f"A precisão do modelo está abaixo do limite aceitável de {MIN_ACCURACY * 100:.2f}%!"
 
 if __name__ == "__main__":
     test_benchmark_quality()

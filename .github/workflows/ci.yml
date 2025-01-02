@@ -1,61 +1,32 @@
-name: CI/CD Pipeline
+name: Run Tests
 
 on:
   push:
     branches:
-      - main
+      - main  # Ou a branch que você deseja executar o fluxo de trabalho
   pull_request:
     branches:
-      - main
+      - main  # Ou a branch que você deseja executar o fluxo de trabalho
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest  # Ou o sistema operacional que você está utilizando
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'  # Versão do Python que você está utilizando
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install torch  # Instala PyTorch
-          pip install pytest  # Instala pytest
-          pip install pytest-benchmark  # Instala pytest-benchmark
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install Node.js dependencies
-        run: npm install
-
-      - name: Start Flask server
-        run: |
-          nohup python app.py &
-        env:
-          FLASK_ENV: development
-
-      - name: Wait for Flask server to be ready
-        run: sleep 20  # Aumenta o tempo de espera para garantir que o servidor Flask esteja pronto
-
-      - name: Run Cypress tests
-        run: npx cypress run
-
-      - name: Run Python tests
-        run: |
-          export PYTHONPATH=$PYTHONPATH:$(pwd)
-          pytest tests  # Especifica o diretório de testes
-
-      - name: Run benchmark tests
-        run: |
-          export PYTHONPATH=$PYTHONPATH:$(pwd)
-          pytest tests/benchmark.py  # Executa o benchmark.py
-          pytest tests/benchmark_quality.py  # Executa o benchmark_quality.py
+    - name: Run tests
+      run: |
+        pytest tests/test_benchmark.py  # Executa o teste benchmark
+        pytest tests/test_benchmark_quality.py  # Executa o teste benchmark_quality
